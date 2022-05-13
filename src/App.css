@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;500;700&display=swap");
+/* Generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #FFFBF7;
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 400;
+  color: #7A7A7A;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* para modificar el tamaño del logo en la navbar */
+.logo {
+  width: 25%;
+  max-width: 20%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* sección principal en todas las páginas */
+main {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 10px;
+}
+
+/* modifica los componentes de bootstrap */
+#root {
+  width: 90%;
+}
+
+.carousel-item .active .card,
+.carousel-item .card {
+  width: 36rem;
+}
+.carousel-item .active .card .card-body .card-title,
+.carousel-item .card .card-body .card-title {
+  color: #110088;
+  font-family: "Roboto", sans-serif;
+}
+.carousel-item .active .card .card-body .card-text,
+.carousel-item .card .card-body .card-text {
+  color: #7A7A7A;
+  font-family: "Roboto";
+}
+.carousel-item .active .card .card-body .btn-primary,
+.carousel-item .card .card-body .btn-primary {
+  color: #61CE70;
+}
+
+/* configuración de los sub-sub items en el acordion de oferta académica */
+.single-item .item-title {
+  padding: 5px 10px;
+  color: #61CE70;
+  display: list-item;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 10px;
+}
+.single-item .info-item {
+  display: none;
+  width: 90%;
+  overflow: auto;
+}
+.single-item .info-item .close {
+  float: right;
+  color: #110088;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.single-item .info-item .close:hover,
+.single-item .info-item .close:focus {
+  color: #61CE70;
+  text-decoration: none;
+  cursor: pointer;
+}
+.single-item .info-item .info-item-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* configura la página de solidarios */
+.info-becarios {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.info-becarios .links {
+  display: block;
+  margin: 20px 0 40px 0px;
+}
+.info-becarios .links .link {
+  display: flex;
+  flex-direction: row;
 }
 
-.App-link {
-  color: #61dafb;
+/* configura el numero de "likes" en la página del foro */
+.badge {
+  background-color: #110088;
+  color: #FFFBF7;
+  border-radius: 35%;
+  width: 40px;
+  text-align: center;
+  font-family: "Roboto";
+  margin-left: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* para distribuir correctamente el formulario de tickets */
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  resize: vertical;
+}
+
+/*  pie de página de todas las páginas */
+footer {
+  padding: 10px 0px;
+  background-color: #110088;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer a,
+footer a:visited {
+  text-decoration: none;
+  color: #FFFBF7;
+}
+footer agreements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  width: 80%;
+  margin: auto;
+}
+footer social-network {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  width: 80%;
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
 }
