@@ -19,9 +19,8 @@ function App() {
           <Route exact path="/solidarios" element={<Solidarios/>}/>
           <Route exact path="/contenidos" element={<Contenidos/>}/>
           <Route exact path="/foro" element={<Foro/>}/>
-          <Route exact path="/cursos" element={<Cursos/>}/>
+          <Route exact path="/cursos" element={<Diplomados/>}/>
           <Route exact path="/tickets" element={<Tickets/>}/>
-          <Route exact path="/cursos/diplo" element={<Diplomados/>}/>
         </Routes>
         <Footer />
       </div>

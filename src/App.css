@@ -168,3 +168,18 @@ footer social-network {
   padding-left: 5%;
   padding-right: 5%;
 }
+
+.gridItem1 {
+  background-color: gray;
+  color: white;
+}
+
+.gridItem2 {
+  background-color: blue;
+  color: white;
+}
+
+.tables {
+  width:90%;
+  margin:auto
+}
